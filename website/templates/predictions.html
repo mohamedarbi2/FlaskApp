@@ -1,0 +1,31 @@
+<form method="POST">
+  <label for="client">Nom du client :</label>
+  <select name="client" id="client">
+    {% for client in nom_clients %}
+    <option value="{{ client }}">{{ client }}</option>
+    {% endfor %}
+  </select>
+  <button type="submit" class="btn btn-primary">Afficher la ligne</button>
+</form>
+
+{% if client_row is defined %}
+  <h2>{{ selected_client }}</h2>
+  <table class="table table-bordered">
+    <thead class="thead-blue">
+      <tr>
+        <th>predicted</th>
+        <th>predictedsupport1</th>
+        <th>predictedsupport2</th>
+        <th>predictedUpsale</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ client_row['predicted'] }}</td>
+        <td>{{ client_row['predictedsupport1'] }}</td>
+        <td>{{ client_row['predictedsupport2'] }}</td>
+        <td>{{ client_row['predictedUpsale'] }}</td>
+      </tr>
+    </tbody>
+  </table>
+{% endif %}

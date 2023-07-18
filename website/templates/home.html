@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<h1 align="center">Menu</h1>
+<ul class="nav">
+  <li class="nav-item">
+<a class="nav-link" href="{{ analytics_url  }}">Analytics</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ predictions_url}}">Predictions</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{{ Forecast_url }}">Forecast</a>
+  </li>
+</ul>
+{% endblock %}
